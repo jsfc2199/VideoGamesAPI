@@ -36,7 +36,7 @@ public class VideogameServiceImplementation implements VideogameService{
     public void deleteGame(Long id) {
         boolean videoGameToDelete = gameRepository.existsById(id);
         if(videoGameToDelete){
-            gameRepository.getById(id);
+            gameRepository.deleteById(id);
         }
     }
 }
